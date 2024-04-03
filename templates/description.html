@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Web Scraping Website</title>
+    <title>HAMZA AMIMI</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="../static/images/robot.png" type="image/x-icon">
@@ -135,6 +135,25 @@
             margin-left: 500px;
             margin-top: 30px;
         }
+        .ads {
+        /* position: fixed; */
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        padding: 50px;
+        color: #fff;
+        text-align: center;
+        background-color: gray;
+        border-radius: 20px;
+        margin-top: 20px;
+      }
+      .side-ads{
+        background-color:gray;
+        margin-top: -200px;
+        height: 500px;
+        width: 200px;
+      }
+      
     </style>
   </head>
   <body>
@@ -212,9 +231,15 @@
        
    
         <!-- Card displaying the description text -->
-        <div class="card">
-            <p>{{ description }}</p>
-        </div>    </body>
+        <div style="display: flex;">
+            <div class="side-ads">left ads</div>
+            <div class="card"><p>{{ description }}</p></div>
+            <div class="side-ads">right ads</div>
+        </div>    
+</body>
+        <div class="ads">
+            ads here
+            </div>
 
     <footer>
       <p>&copy; 2024 HMTools. All rights reserved.</p>
