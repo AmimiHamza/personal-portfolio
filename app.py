@@ -1,4 +1,4 @@
-from flask import Flask, render_template,request
+from flask import Flask, render_template,request,send_from_directory
 from utils import data
 
 app = Flask(__name__)
@@ -28,5 +28,11 @@ def description():
     image=name+data[name][1]
     print(image)
     return render_template('description.html',image=image ,url=url,description=description)
+
+# Route to serve the ads.txt file
+@app.route('/ads.txt')
+def ads_txt():
+    return send_from_directory(app.root_path, 'ads.txt')
+
 if __name__ == '__main__':
     app.run(debug=True)
