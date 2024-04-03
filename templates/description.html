@@ -114,7 +114,7 @@
         margin-right: 20px;
       }
       .card {
-            width: 300px;
+            width: 600px;
             margin: 20px auto;
             padding: 20px;
             background-color: #f0f0f0;
@@ -133,6 +133,7 @@
             width: 200px;
             height: 200px;
             margin-left: 500px;
+            margin-top: 30px;
         }
     </style>
   </head>
@@ -203,11 +204,12 @@
       </nav>
     </header>
     <body>
-        <div style="display: flex;margin-left :500px; ;"><h1 style="color: #f0f0f0;text-align: center;">Description</h1>
-        <pre>             </pre><a href="{{url}}"><img style="width: 30px;height: 30px;" src="../static/images/github.png" alt=""></a></div>
+         <!-- Image with the same name as the variable 'name' -->
+         <img class="imgdesc" src="../static/images/{{ image }}" alt="{{ name }}" />
+        <div style="display: flex;margin-left :500px; ;"><h1 style="color: #f0f0f0;text-align: center;">Description:</h1>
+        <pre>             </pre><a href="{{url}}"><img style="width: 25px;height: 25px;" src="../static/images/github.png" alt=""></a></div>
         
-        <!-- Image with the same name as the variable 'name' -->
-        <img class="imgdesc" src="../static/images/{{ image }}" alt="{{ name }}" />
+       
    
         <!-- Card displaying the description text -->
         <div class="card">
