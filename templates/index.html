@@ -113,6 +113,48 @@
         width: 30px;
         margin-right: 20px;
       }
+      form {
+      width: 300px;
+      border: 7px solid #666;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 0 auto;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 5px;
+      background-color: #333;
+      color: #fff;
+    }
+
+    input[type="text"]:focus,
+    textarea:focus {
+      outline: none;
+      box-shadow: 0 0 5px #ffffff;
+    }
+
+    input[type="submit"] {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: #4CAF50;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
     </style>
   </head>
   <body>
@@ -202,7 +244,7 @@
                 >Discover More</a
               >
 
-              <a href="#section_3" class="link link--kale smoothscroll"
+              <a href="#section_3"  class="link link--kale smoothscroll"
                 >Contact me</a
               >
             </div>
@@ -288,10 +330,10 @@
 
             <div class="col-lg-6 col-12">
               <div class="book-section-info">
-
+                <br><br>
                 <h2 style="color:white">About the website</h2>
-
-                <p>
+<br>
+                <p style="color: rgba(217, 216, 216, 0.829);">
                   Explore my portfolio to see examples of my work and projects. Dive into my resume to learn more about my skills and experience. Get in touch to discuss how we can collaborate on your next project.
                 </p>
 
@@ -313,57 +355,70 @@
               <img  src="../static/images/roboto.jpg" class="author-image img-fluid" alt="" />
             </div>
 
-            <div class="col-lg-6 col-12">
-              <h6 class="mt-5">Say hi and talk to me</h6>
+            <div style="margin-bottom: 50px;" class="col-lg-6 col-12">
+              <h6 style="margin-bottom: 100px;font-family: Courier New;font-size: 40px;" >Say hi and talk to me</h6>
 
-              <h2 class="mb-4">Contact</h2>
 
-              <p class="mb-3">
-                <i class="bi-geo-alt me-2"></i>
-                Rabat, Morocco
-              </p>
+              <h2 class="mb-4">Send a message:</h2>
 
-              <p>
-                <a href="amimi1hamza@gmail.com" class="contact-link">
-                  amimi1hamza@gmail.com
-                </a>
-              </p>
+              <form action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="6deab5f9-1d3c-4218-b333-cf0ffde082ac">
+                
+                <label style="color: white;" for="email">email:</label>
+                <input type="text" name="email" id="email" required/>
+                <br>
+                <label style="color: white;" for="text">message</label>
+                <textarea name="text" id="text" rows="4" cols="50"></textarea>
+                <button type="submit">Send</button>
+              </form>
 
-              <h6 class="site-footer-title mt-5 mb-3">Social</h6>
+              
 
-              <ul class="social-icon mb-4">
-                <li class="social-icon-item">
-                  <a
-                    href="https://www.instagram.com/the_kuroyam/"
-                    target="_blank"
-                    class="social-icon-link bi-instagram"
-                  ></a>
-                </li>
+              <h6 style="color: black;">Social:</h6><br><br>
 
-                <li class="social-icon-item">
-                  <a
-                    href="#"
-                    target="_blank"
-                    class="social-icon-link bi-twitter"
-                  ></a>
-                </li>
-
-                <li class="social-icon-item">
-                  <a
-                    href="https://www.facebook.com/profile.php?id=100021629332114"
-                    target="_blank"
-                    class="social-icon-link bi-facebook"
-                  ></a>
-                </li>
-
-                <li class="social-icon-item">
-                  <a
-                    href="https://api.whatsapp.com/send?phone=+212643626334"
-                    target="_blank"
-                    class="social-icon-link bi-whatsapp"
-                  ></a>
-                </li>
+              <ul style="display: flex;list-style-type:none ;">
+                <li style="margin-left: 50px;">
+                    <a
+                      href="https://github.com/AmimiHamza"
+                      target="_blank"
+                    ><img class="icone" src="../static/images/github.png" alt=""></a>
+                  </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.linkedin.com/in/hamza-amimi-47aa4a275/"
+                      target="_blank"
+                    ><img class="icone" src="../static/images/linkedin.png" alt=""></a>
+                  </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.instagram.com/the_kuroyam/"
+                      target="_blank"
+                    ><img class="icone" src="../static/images/instagram.png" alt=""></a>
+                  </a>
+                  </li>
+                    <li class="icone">
+                      <a
+                        href="https://www.facebook.com/profile.php?id=100021629332114"
+                        target="_blank"
+                      ><img class="icone" src="../static/images/facebook.png" alt=""></a>
+                    </li>
+        
+                    <li class="icone">
+                        <a
+                          href="https://api.whatsapp.com/send?phone=+212643626334"
+                          target="_blank"
+                        ><img class="icone" src="../static/images/whatsapp.png" alt=""></a>
+                      </li>
+                      <li class="icone">
+                        <a
+                          href="mailto:amimi1hamza@gmail.com"
+                          target="_blank"
+                        ><img class="icone" src="../static/images/email.png" alt=""></a>
+                      </li>
               </ul>
+              <br><br>
 
               <p class="copyright-text">
                 <a rel="nofollow" href="#"

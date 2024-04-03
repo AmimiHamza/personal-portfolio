@@ -197,7 +197,7 @@ strong {
   cursor: pointer;
   position: relative;
   white-space: nowrap;
-  color: var(--white-color);
+  color: white;
 }
 
 .link::before,
