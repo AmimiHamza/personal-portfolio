@@ -113,43 +113,27 @@
         width: 30px;
         margin-right: 20px;
       }
-      .image-container {
-        display:flex;
-        flex-wrap: wrap; /* Enable wrapping of flex items */
-        justify-content: center; /* Center the items horizontally */
-        align-items: center; /* Center items horizontally */
+      .card {
+            width: 300px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
 
-        margin-right: 100px;
-        position: relative;
-      }
-
-      .image-container img {
-        width: 200px;
-        height: 200px; /* Adjust the desired height here */
-        object-fit: cover; /* Ensures the image fills the container */
-        
-
-        border: 2px solid #ddd; /* Add border property */
-        border-radius: 5px; /* Add border radius for rounded corners */
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Add a subtle box shadow */
-      }
-     .projet{
-      margin-right: 50px;
-        margin-bottom: 70px;
-     }
-     .projet p{
-      text-align: center;
-      color: #ddd;
-     }
-     .projet img {
-  width: 300px; /* Make the images fill the parent div */
-  height: 300px; /* Maintain aspect ratio */
-  border: 2px solid #ddd; /* Add border property */
-  border-radius: 5px; /* Add border radius for rounded corners */
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Add a subtle box shadow */
-}
-      
-      
+        /* Style for the image */
+        .card img {
+            width: 100%;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .imgdesc{
+            width: 200px;
+            height: 200px;
+            margin-left: 500px;
+        }
     </style>
   </head>
   <body>
@@ -219,15 +203,16 @@
       </nav>
     </header>
     <body>
-      <div class="image-container">
-        <div class="projet"><a href="/description?name=syntaxic-tree-to-assembly"><img src="../static/images/syntaxic-tree-to-assembly.jpg"  /></a><br><p >Syntaxic-tree-to-assembly</p></div>
-        <div class="projet"><a href="/description?name=telegram_bot"><img src="../static/images/telegram_bot.png"  /></a><br><p >telegram_bot</p></div>
-        <div class="projet"><a href="/description?name=gestion-des-stocks"><img src="../static/images/gestion-des-stocks.png"  /></a><br><p >gestion-des-stocks</p></div>
-        <div class="projet"><a href="/description?name=athar"><img src="../static/images/athar.jpg"  /></a><br><p >athar</p></div>
-        <div class="projet"><a href="/description?name=web-scraping-platform"><img src="../static/images/web-scraping-platform.png"  /></a><br><p >web-scraping-platform</p></div>
-        <div class="projet"><a href="/description?name=chat-plateform"><img src="../static/images/chat-plateform.avif"  /></a><br><p >chat-plateform</p></div>
+        <div style="display: flex;margin-left :500px; ;"><h1 style="color: #f0f0f0;text-align: center;">Description</h1>
+        <pre>             </pre><a href="{{url}}"><img style="width: 30px;height: 30px;" src="../static/images/github.png" alt=""></a></div>
         
-      </body>
+        <!-- Image with the same name as the variable 'name' -->
+        <img class="imgdesc" src="../static/images/{{ image }}" alt="{{ name }}" />
+   
+        <!-- Card displaying the description text -->
+        <div class="card">
+            <p>{{ description }}</p>
+        </div>    </body>
 
     <footer>
       <p>&copy; 2024 HMTools. All rights reserved.</p>
