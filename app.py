@@ -34,5 +34,8 @@ def description():
 def ads_txt():
     return send_from_directory(app.root_path, 'ads.txt')
 
+@app.route('/test')
+def testt():
+    return send_from_directory(app.root_path, 'requirements.txt')
 if __name__ == '__main__':
     app.run(debug=True)
