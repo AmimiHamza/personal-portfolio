@@ -10,11 +10,12 @@ https://templatemo.com/tm-588-ebook-landing
   CUSTOM PROPERTIES ( VARIABLES )             
 -----------------------------------------*/
 :root {
-  --white-color: #ffffff;
-  --primary-color: #e76f51;
-  --secondary-color: #e9c46a;
+  --white-color: #000000;
+  --primary-color: orange;
+  --secondary-color: white;
   --section-bg-color: #f0f8ff;
-  --custom-btn-bg-color: #f4a261;
+  --custom-btn-bg-color: white;
+  --custom-btn-bg-color2: gray;
   --custom-btn-bg-hover-color: #e76f51;
   --dark-color: #000000;
   --p-color: #717275;
@@ -796,6 +797,11 @@ strong {
   position: relative;
   overflow: hidden;
 }
+.contact-section2 {
+  background: var(--custom-btn-bg-color2);
+  position: relative;
+  overflow: hidden;
+}
 
 .contact-section::before {
   content: "";
@@ -824,6 +830,30 @@ strong {
 }
 
 .contact-section .copyright-text {
+  font-size: var(--copyright-font-size);
+}
+.contact-section2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 450px 450px 0 0;
+  border-color: var(--white-color) transparent transparent;
+  pointer-events: none;
+}
+
+.contact-section2 .container {
+  position: relative;
+}
+
+.contact-section2 p {
+  color: var(--white-color);
+  font-size: var(--h6-font-size);
+}
+.contact-section2 .copyright-text {
   font-size: var(--copyright-font-size);
 }
 
