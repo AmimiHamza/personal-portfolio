@@ -27,7 +27,7 @@ def description():
     description=data[name][0]
     image=name+data[name][1]
     print(image)
-    return render_template('description.html',image=image ,url=url,description=description)
+    return render_template('description.html',name=name ,image=image ,url=url,description=description)
 
 # Route to serve the ads.txt file
 @app.route('/ads.txt')
