@@ -157,6 +157,48 @@
         height: 500px;
         width: 200px;
       }
+
+.button-27 {
+  appearance: none;
+  background-color: #000000;
+  border: 2px solid #1A1A1A;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100%;
+  will-change: transform;
+}
+
+.button-27:disabled {
+  pointer-events: none;
+}
+
+.button-27:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.button-27:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
       
     </style>
   </head>
@@ -228,14 +270,32 @@
     </header>
     <body>
          <!-- Image with the same name as the variable 'name' -->
-         <img class="imgdesc" src="../static/images/{{ image }}" alt="{{ name }}" />
-        <div style="display: flex;margin-left :500px; ;"><h1 style="color: #f0f0f0;text-align: center;">Description:</h1>
-        <pre>             </pre><a href="{{url}}"><img style="width: 25px;height: 25px;" src="../static/images/github.png" alt=""></a></div>
+        <div style="display: flex;margin-left: 200px;">
+          <div style="display: block;">
+            <div style="display: flex;margin-top: 30px;">
+              <h1 style="color: #f0f0f0;text-align: center;margin-left: 150px;">demo</h1>
+              <button class="button-27" style="margin-left: 30px;" id="next-image" onclick="incrementCount()">next</button>
+            </div>
+            <img style="height: 450px;width: 450px;margin-left: 200px;" class="imgdesc" src="../static/images/{{ image.split('.')[0] }}/1.png" alt=""></div>
+            <script>
+
+              let count = 2; // initialize count to 1
+
+              function incrementCount() {
+                src = document.querySelector('.imgdesc').src = `../static/images/{{ image.split('.')[0] }}/${count}.png`;
+                count=count%5+1;
+              }
+            </script>
+        </div>
+        
         
        
    
         <!-- Card displaying the description text -->
-        <div style="display: flex;">
+        <div style="display: block;">
+          <div style="display: flex;margin-left :500px;margin-top:50px  ;"><h1 style="color: #f0f0f0;text-align: center;">Description:</h1>
+            <pre>             </pre><a target="_blank" href="{{url}}"><img style="width: 25px;height: 25px;" src="../static/images/github.png" alt=""></a></div>
+            <br>
             <div class="card"><p>{{ description }}</p></div>
         </div>    
 </body>
